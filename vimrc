@@ -25,6 +25,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/vimproc', {'build': {'mac': 'make -f make_mac.mak'}}
+NeoBundle 'mpyatishev/vim-sqlformat'
 
 " for Go
 NeoBundle 'google/vim-ft-go'
@@ -96,6 +97,9 @@ set display=uhex      " 印字不可能文字を16進数で表示
 :set lazyredraw
 " 高速ターミナル接続を行う
 :set ttyfast
+
+" jsonのハイライト
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " ハイライト on
 syntax enable

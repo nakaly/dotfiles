@@ -45,4 +45,30 @@ export GIT_PAGER="lv -c"
 export EDITOR=vim
 export LESS="-X"
 
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
+# plenv
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
+
+# login
+source ~/.utils/login
+
+# CUDA
+export CUDA_HOME=/usr/local/cuda
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
+export PATH="$CUDA_HOME/bin:$PATH"
+
+# mysql
+export MYSQL_PATH=/usr/local/Cellar/mysql/5.6.27  
+export PATH=$PATH:$MYSQL_PATH/bin
+
+# RabbitMQ
+PATH=$PATH:/usr/local/sbin
+
+# Rust
+PATH=$PATH:$HOME/.cargo/bin
+#PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+#MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
